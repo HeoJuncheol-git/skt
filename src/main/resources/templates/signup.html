@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>sign up</title>
+</head>
+<body>
+<h1>회원가입 페이지</h1> <hr>
+
+<form th:action="@{/user}" method="POST">
+    아이디 : <input type="text" name="id"> <br>
+    비밀번호 : <input type="password" name="urPassword"> <br>
+    이메일  : <input type="email" name="urEmail"><br>
+    이름   : <input type="text" name="urName"><br>
+    핸드폰번호   : <input type="text" name="urPhone"><br>
+    키   : <input type="text" name="urHeight"><br>
+    나이   : <input type="text" name="urAge"><br>
+    성별 : <input type="radio" name = "urSex" value="남자">남성
+          <input type="radio" name = "urSex"  value="여자">여성 <br>
+    혈액형 : <input type="radio" name = "urBlood" value="A">A형
+    <input type="radio" name = "urBlood"  value="B">B형
+    <input type="radio" name = "urBlood"  value="O">O형
+    <input type="radio" name = "urBlood" value="AB">AB형<br/>
+    종교 : <select name="urReligion">
+    <option value="">선택하세요</option>
+    <option value="무교">무교</option>
+    <option value="기독교">기독교</option>
+    <option value="카톨릭교">카톨릭교</option>
+    <option value="불교">불교</option>
+    <option value="원불교">원불교</option>
+    <option value="옴진리교">옴진리교</option>
+    <option value="시트교">시트교</option>
+</select><br>
+    음주: <input type="radio" name="urDrunk" value="안마신다">안마신다
+    <input type="radio" name="urDrunk" value="가끔">가끔
+    <input type="radio" name="urDrunk" value="자주">자주
+    <br/>
+    흡연: <input type="radio" name="urRadio" value="흡연">흡연자
+    <input type="radio" name="urRadio" value="비흡연">비흡연자
+    <br>
+    학력: <select name="urEducation">
+    <option value="">선택하세요</option>
+    <option value="중학교졸업">중졸</option>
+    <option value="고등학교졸업"> 고졸</option>
+    <option value="대학교2년">대학교(2년)졸업</option>
+    <option value="대학교4년">대학교(4년)졸업</option>
+    <option value="대학원재학">대학원 재학</option>
+    <option value="대학원졸업">대학원 졸업</option>
+</select>
+    <br/>
+    직업: <select name="urJob">
+    <option value="">선택하세요</option>
+    <option value="학생">학생</option>
+    <option value="컴퓨터/인터넷">컴퓨터/인터넷</option>
+    <option value="언론">언론</option>
+    <option value="공무원">공무원</option>
+    <option value="군인">군인</option>
+    <option value="서비스업">서비스업</option>
+    <option value="교육">교육</option>
+    <option value="금융/증권/보험업">금융/증권/보험업</option>
+    <option value="유통업">유통업</option>
+    <option value="예술">예술</option>
+    <option value="의료">의료</option>
+    <option value="미용">미용</option>
+</select>
+    <br/>
+    성격: <div class="checks">
+
+        <input type="checkbox" name="urPersonality"  value="pure">순수하다
+
+        <input type="checkbox" name="urPersonality" value="excited">활기차다
+
+        <input type="checkbox" name="urPersonality" value="Humorous">유머가있다
+
+        <input type="checkbox" name="urPersonality" value="cute">귀엽다
+
+        <input type="checkbox" name="urPersonality" value="Sincere">성실하다
+
+        <input type="checkbox" name="urPersonality" value="Cheerful">쾌할하다
+
+        <input type="checkbox" name="urPersonality" value="clean">깔끔하다
+</div>><br>
+
+    자기소개<br/>
+    <textarea style="resize: none;" name="urIntroduce" cols="60" rows="10.5"></textarea><br>
+
+
+
+    <input type="radio" name="urAuth" value="ROLE_ADMIN,ROLE_USER"> 관리자회원
+    <input type="radio" name="urAuth" value="ROLE_USER" checked="checked"> 일반회원 <br>
+    <button type="submit">가입</button>
+</form> <br>
+
+<a href="/login">로그인 →</a>
+</body>
+</html>
